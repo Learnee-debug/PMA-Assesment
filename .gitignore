@@ -1,0 +1,10 @@
+node_modules/
+dist/
+backend/weather.db
+backend/server.log
+backend/venv/
+backend/__pycache__/
+backend/app/__pycache__/
+*.pyc
+frontend/vite.log
+.env.local
