@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: pma-weather-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: RELOAD
+        value: "false"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: DB_PATH
+        value: /data/weather.db
+    disk:
+      name: weather-db
+      mountPath: /data
+      sizeGB: 1
